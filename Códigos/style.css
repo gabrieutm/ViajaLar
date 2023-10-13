@@ -3,42 +3,86 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 #menu-header {
     width: 100%;
     position: fixed;
     background-color: blue;
+    z-index: 1;
+    height: 55px;
 }
 
-#space1 {
-    width: 80%;
-    height: 90vh;
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
+#cover {
     background-color: red;
-}
-/*
-#container1 {
-    width: 80%;
-    height: 110vh;
-    display: flex;
     position: relative;
-    justify-content: center;
-    align-items: center;
-}
-
-#container1 img {
+    display: flex;
     width: 100%;
-    height: 80%;
-    position: absolute;
-    opacity: 0;
-    transition: 3s ease-in-out;
+    height: 90vh;
+    top: 55px;
 }
 
-#container1 img.selected {
-    opacity: 1;
-}*/
+#about {
+    background-color: green;
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 80vh;
+}
+
+#log-reg {
+    background-color: violet;
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 80vh;
+}
+
+#how {
+    background-color: yellow;
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 80vh;
+}
+
+#success-cases {
+    background-color: brown;
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 80vh;
+}
+
+#faq {
+    background-color: orange;
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 80vh;
+}
+
+#contact {
+    background-color: fuchsia;
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 80vh;
+}
+
+#app {
+    background-color: lightcyan;
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 80vh;
+}
+
+footer {
+    background-color: crimson;
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 55px;
+}
