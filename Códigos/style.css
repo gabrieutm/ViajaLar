@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#menu-header {
+    width: 100%;
+    position: fixed;
+    background-color: blue;
+}
+
+#space1 {
+    width: 80%;
+    height: 90vh;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: red;
+}
+/*
+#container1 {
+    width: 80%;
+    height: 110vh;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+#container1 img {
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    opacity: 0;
+    transition: 3s ease-in-out;
+}
+
+#container1 img.selected {
+    opacity: 1;
+}*/
