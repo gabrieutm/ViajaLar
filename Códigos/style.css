@@ -130,7 +130,6 @@
 #dropdown-menu {
     position: fixed;
     display: block;
-    background-color: chartreuse;
     top: 55px;
     width: 100%;
     height: calc(100% - 55px);
@@ -140,7 +139,6 @@
 #dropdown-menu ul {
     position: relative;
     display: flex;
-    background-color: darkkhaki;
     list-style: none;
     flex-direction: column;
     width: 100%;
@@ -149,6 +147,7 @@
 
 #dropdown-menu ul li {
     height: 100%;
+    border-bottom: 2px solid var(--cor3);
 }
 
 #dropdown-menu ul li #social-mediasmobile {
@@ -231,7 +230,7 @@
     color: var(--cor4);
     margin-top: 10px;
     background-color: var(--cor1);
-    width: 90%;
+    width: 550px;
     border-radius: 10px;
     font-weight: bolder;
 }
@@ -243,8 +242,8 @@
     display: flex;
     background: linear-gradient(to right, var(--cor1) 60%, transparent);
     bottom: 30px;
-    height: 13%;
-    width: 90%;
+    height: 12vh;
+    width: 100vw;
     left: 0;
     color: var(--cor5);
     text-align: left;
@@ -319,19 +318,162 @@
     font-family: var(--textosgerais);
     font-family: 15px;
     font-weight: normal;
-    width: 85%;
+    width: 60vw;
     line-height: 25px;
     color: var(--cor5);
     padding: 5px 0;
 }
 
 #log-reg {
-    background-color: violet;
     position: relative;
     display: flex;
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     top: 55px;
+    overflow: hidden;
+}
+
+#log-reg-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: url(../../Imagens/230725152449-01-group-friend-vacation-tips-top.webp) no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+#log-screen {
+    background-color: rgba(255, 255, 255, 0.24);
+    backdrop-filter: blur(10px);
+    position: relative;
+    width: 400px;
+    height: 450px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid var(--cor3);
+}
+
+#log-screen h2 {
+    font-family: var(--titulos);
+    color: var(--cor5);
+    font-size: 30px;
+    font-weight: bolder;
+    padding: 20px 0;
+    text-align: center;
+}
+
+#log-screen .input-box {
+    position: relative;
+    width: 310px;
+    margin: 30px 0;
+    border-bottom: 2px solid var(--cor1);
+    border-color: var(--cor5);
+    color: var(--cor5);
+    font-family: var(--textosgerais);
+    font-size: 15px;
+}
+
+#log-screen .input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: 0.2s ease-in-out;
+}
+
+#log-screen .input-box input:focus~label,
+#log-screen .input-box input:valid~label {
+    top: -5px;
+}
+
+#log-screen .input-box input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0 40px 0 5px;
+}
+
+#log-screen .input-box .icon {
+    position: absolute;
+    right: 8px;
+    color: var(--cor);
+    font-size: 15px; 
+}
+
+#log-screen #remember-forgot {
+    margin: -15px -20px 35px -20px;
+    font-size: 15px;
+    color: var(--cor5);
+    font-family: var(--textosgerais);
+    display: flex;
+    justify-content: space-around;
+}
+
+#log-screen #remember-forgot label input {
+    margin-right: 3px;
+}
+
+#log-screen #remember-forgot a {
+    color: var(--cor5);
+    text-decoration: none;
+}
+
+#log-screen #remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+#log-screen button {
+    width: 60%;
+    height: 35px;
+    background-color: var(--cor3);
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: var(--botões);
+    color: var(--cor5);
+    font-weight: bolder;
+}
+
+#log-screen #register-link {
+    font-size: 15px;
+    color: var(--cor5);
+    text-align: center;
+    margin: 25px 0 15px;
+    font-family: var(--textosgerais);
+}
+
+#log-screen #register-link p a {
+    color: var(--cor5);
+    text-decoration: none;
+    font-family: var(--textosgerais);
+}
+
+#log-screen #register-link p a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 650px) {
+    #log-screen {
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: 0;
+    }
+}
+
+#reg-screen {
+    display: none;
 }
 
 #how {
@@ -390,15 +532,15 @@ footer {
 
 #whatsapp-button {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 55px;
+    right: 40px;
     z-index: 2;
     animation: wave 2s ease infinite;
 }
 
 #whatsapp-button img {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
 }
 
 @keyframes wave {

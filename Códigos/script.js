@@ -4,7 +4,7 @@ function scrollToSection(sectionId) {
     if (section) {
         section.scrollIntoView({
             behavior: "smooth",
-            block: "end"
+            block: "start"
         });
     }
 };
