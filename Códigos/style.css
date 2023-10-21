@@ -628,6 +628,8 @@
     justify-content: center;
     text-align: center;
     flex-direction: column;
+    user-select: none;
+    cursor: default;
 }
 
 #how-container {
@@ -727,6 +729,123 @@
     height: 100%;
     top: 55px;
     background-color: var(--cor2);
+    user-select: none;
+    cursor: default;
+    padding-bottom: 50px;
+}
+
+#success-cases-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#success-cases-container h1 {
+    font-size: 60px;
+    font-family: var(--titulos);
+    font-weight: bolder;
+    color: var(--cor5);
+    padding: 30px 10px;
+}
+
+#success-cases-container h2 {
+    font-size: 30px;
+    font-family: var(--titulos);
+    font-weight: bolder;
+    color: var(--cor2);
+    padding: 10px 10px;
+    background-color: var(--cor5);
+    border-radius: 10px;
+}
+
+.cases-space {
+    position: relative;
+    display: flex;
+    flex-direction: space-between;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    margin: 15px 0;
+}
+
+.case {
+    margin: 10px;
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 30%;
+}
+
+.case img {
+    width: 320px;
+    height: 400px;
+    margin: 30px 30px 10px 30px;
+    border-radius: 10px;
+}
+
+.case h3 {
+    font-size: 30px;
+    font-family: var(--titulos);
+    font-weight: bolder;
+    color: var(--cor1);
+    margin: 10px 0;
+}
+
+.case p {
+    font-size: 15px;
+    color: var(--cor5);
+    font-family: var(--textosgerais);
+    padding: 20px 25px;
+    text-align: justify;
+    background-color: var(--cor4);
+    border-radius: 10px;
+    width: 80%;
+    line-height: 20px;
+}
+
+.case p strong {
+    color: var(--cor1);
+    font-weight: bolder;
+}
+
+#success-cases-submit {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 30px 0;
+}
+
+#success-cases-submit h1 {
+    font-size: 30px;
+    font-family: var(--titulos);
+    font-weight: bolder;
+    color: var(--cor5);
+    margin: 10px 0;
+}
+
+#success-cases-submit p {
+    font-size: 15px;
+    color: var(--cor5);
+    font-family: var(--textosgerais);
+    text-align: center;
+    width: 65%;
+    line-height: 20px;
+}
+
+#success-cases-submit p strong {
+    color: var(--cor4);
+    font-weight: bolder;
 }
 
 #faq {
