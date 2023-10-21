@@ -129,7 +129,7 @@
 
 #dropdown-menu {
     position: fixed;
-    display: block;
+    display: none;
     top: 55px;
     width: 100%;
     height: calc(100% - 55px);
@@ -172,7 +172,7 @@
     position: relative;
     display: flex;
     width: 100%;
-    height: 90vh;
+    height: 540px;
     top: 55px;
     overflow: hidden;
     user-select: none;
@@ -242,15 +242,16 @@
     display: flex;
     background: linear-gradient(to right, var(--cor1) 60%, transparent);
     bottom: 30px;
-    height: 12vh;
+    height: 80px;
     width: 100vw;
     left: 0;
     color: var(--cor5);
     text-align: left;
     font-family: var(--textosgerais);
     font-size: 15px;
-    padding-left: 30px;
+    padding: 0 30px;
     cursor: default;
+    white-space: nowrap;
 }
 
 #cover #content p strong {
@@ -262,12 +263,13 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 200vh;
+    height: 100%;
     top: 55px;
     overflow: hidden;
     background-color: var(--cor1);
     cursor: default;
     user-select: none;
+    padding: 40px 25px;
 }
 
 #about div {
@@ -316,7 +318,7 @@
 #about div article p {
     text-align: center;
     font-family: var(--textosgerais);
-    font-family: 15px;
+    font-size: 15px;
     font-weight: normal;
     width: 60vw;
     line-height: 25px;
@@ -324,11 +326,15 @@
     padding: 5px 0;
 }
 
+#about div article p strong {
+    color: white;
+}
+
 #log-reg {
     position: relative;
     display: flex;
     width: 100%;
-    height: 100vh;
+    height: 700px;
     top: 55px;
     overflow: hidden;
 }
@@ -340,28 +346,28 @@
     align-items: center;
     width: 100%;
     height: 100%;
-    background: url(../../Imagens/230725152449-01-group-friend-vacation-tips-top.webp) no-repeat;
+    background: url(../Imagens/cover.png) no-repeat;
     background-size: cover;
-    background-position: top;
+    background-position: center;
 }
 
 #log-screen {
     background-color: rgba(255, 255, 255, 0.24);
     backdrop-filter: blur(10px);
+    border: 2px solid var(--cor3);
+    border-radius: 20px;
     position: relative;
     width: 400px;
     height: 450px;
-    border-radius: 20px;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     text-align: center;
-    border: 2px solid var(--cor3);
 }
 
 #log-screen h2 {
     font-family: var(--titulos);
-    color: var(--cor5);
+    color: var(--cor4);
     font-size: 30px;
     font-weight: bolder;
     padding: 20px 0;
@@ -374,7 +380,7 @@
     margin: 30px 0;
     border-bottom: 2px solid var(--cor1);
     border-color: var(--cor5);
-    color: var(--cor5);
+    color: var(--cor4);
     font-family: var(--textosgerais);
     font-size: 15px;
 }
@@ -400,19 +406,21 @@
     border: none;
     outline: none;
     padding: 0 40px 0 5px;
+    font-family: var(--textosgerais);
+    font-size: 15px;
 }
 
 #log-screen .input-box .icon {
     position: absolute;
     right: 8px;
-    color: var(--cor);
+    color: var(--cor5);
     font-size: 15px; 
 }
 
 #log-screen #remember-forgot {
     margin: -15px -20px 35px -20px;
     font-size: 15px;
-    color: var(--cor5);
+    color: var(--cor4);
     font-family: var(--textosgerais);
     display: flex;
     justify-content: space-around;
@@ -423,7 +431,7 @@
 }
 
 #log-screen #remember-forgot a {
-    color: var(--cor5);
+    color: var(--cor4);
     text-decoration: none;
 }
 
@@ -431,7 +439,7 @@
     text-decoration: underline;
 }
 
-#log-screen button {
+#log-screen #entrar {
     width: 60%;
     height: 35px;
     background-color: var(--cor3);
@@ -451,47 +459,274 @@
     text-align: center;
     margin: 25px 0 15px;
     font-family: var(--textosgerais);
+    cursor: default;
+    user-select: none;
 }
 
-#log-screen #register-link p a {
+#log-screen #register-link p button {
+    background-color: transparent;
     color: var(--cor5);
-    text-decoration: none;
     font-family: var(--textosgerais);
+    font-size: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
 
-#log-screen #register-link p a:hover {
+#log-screen #register-link p button:hover {
     text-decoration: underline;
 }
 
-@media (max-width: 650px) {
-    #log-screen {
-        width: 100%;
-        height: 100%;
-        border: none;
-        border-radius: 0;
-    }
+#reg-screen {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 500px;
+    width: 800px;
+    background-color: rgba(255, 255, 255, 0.24);
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--cor3);
+    border-radius: 20px;
 }
 
-#reg-screen {
+#reg-screen form {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+#reg-screen #data-container {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+}
+
+#main-info #profile {
+    display: flex;
+    position: relative;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+    width: 310px;
+    height: 40px;
+    margin: 5px 30px;
+    border: 2px solid var(--cor5);
+    border-radius: 10px;
+    color: var(--cor4);
+    font-weight: normal;
+    font-family: var(--textosgerais);
+    font-size: 15px;
+}
+
+#main-info #profile h3 {
+    font-size: 15px;
+    font-weight: lighter;
+    margin-left: 5px;
+    cursor: default;
+    user-select: none;
+}
+
+#main-info #profile input[type="radio"] {
     display: none;
 }
 
+#main-info #profile label {
+    margin: 0 25px;
+    cursor: pointer;
+}
+
+#main-info #profile input[type="radio"]:checked + label i {
+    color: var(--cor3);
+  }
+
+#reg-screen form #cadastrar {
+    margin: 20px 0;
+    width: 30%;
+    height: 35px;
+    background-color: var(--cor3);
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: var(--botões);
+    color: var(--cor5);
+    font-weight: bolder;
+}
+
+#reg-screen form #login-link {
+    width: 250px;
+    font-family: var(--textosgerais);
+    font-size: 15px;
+    color: var(--cor5);
+    cursor: default;
+    user-select: none;
+}
+
+#login-link button {
+    background-color: transparent;
+    outline: line;
+    border: none;
+    color: var(--cor5);
+    font-size: 15px;
+    font-family: var(--textosgerais);
+    cursor: pointer;
+}
+
+#reg-screen form #login-link button:hover {
+    text-decoration: underline;
+}
+
+#reg-screen h2 {
+    font-family: var(--titulos);
+    color: var(--cor4);
+    font-size: 30px;
+    font-weight: bolder;
+    padding-bottom: 20px;
+    cursor: default;
+    user-select: none;
+}
+
+#reg-screen .input-box {
+    position: relative;
+    width: 310px;
+    height: 40px;
+    margin: 5px 30px;
+    border: 2px solid var(--cor5);
+    border-radius: 10px;
+    color: var(--cor5);
+}
+
+#reg-screen .input-box input {
+    border: none;
+    outline: none;
+    padding: 0 40px 0 5px;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    font-family: var(--textosgerais);
+    font-size: 15px;
+}
+
+#reg-screen .input-box input::placeholder {
+    color: var(--cor4);
+}
+
 #how {
-    background-color: yellow;
+    background-color: var(--cor3);
     position: relative;
     display: flex;
     width: 100%;
-    height: 80vh;
+    height: 100%;
     top: 55px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+#how-container {
+    margin: 30px 0;
+}
+
+#how-container h1 {
+    font-size: 30px;
+    font-family: var(--titulos);
+    font-weight: bolder;
+    color: var(--cor1);
+    padding: 10px 5px;
+}
+
+#how-container .how-perfil {
+    margin: 30px 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#how-container .how-perfil h2 {
+    font-size: 30px;
+    font-family: var(--titulos);
+    font-weight: bolder;
+    color: var(--cor3);
+    padding: 10px 5px;
+    margin: 10px 0;
+    border-radius: 10px;
+    background-color: var(--cor1);
+}
+
+#how-container .how-perfil article {
+    width: 70%;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+#how-container .how-perfil article h3 {
+    padding: 10px 5px;
+    margin: 10px 0;
+    color: var(--cor1);
+    border-radius: 10px;
+    width: 80%;
+    font-family: var(--titulos);
+    font-size: 20px;
+}
+
+#how-container .how-perfil article div {
+    border: 2px solid var(--cor1);
+    border-radius: 10px;
+    padding: 5px 30px;
+    width: 95%;
+}
+
+#how-container .how-perfil article p {
+    text-align: center;
+    font-family: var(--textosgerais);
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 25px;
+    color: var(--cor5);
+    padding: 5px 0;
+    width: 100%;
+}
+
+#how-container .how-perfil article p strong {
+    color: white;
+    font-weight: bolder;
+}
+
+#linear-background {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20vh;
+    top: 55px;
+    background: linear-gradient(to bottom, var(--cor3), var(--cor2) 60%);
 }
 
 #success-cases {
-    background-color: brown;
     position: relative;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 80vh;
+    height: 100%;
     top: 55px;
+    background-color: var(--cor2);
 }
 
 #faq {
@@ -550,4 +785,55 @@ footer {
     50% {
         transform: translateX(4px);
     }
+}
+
+@media (max-width: 700px) {
+
+    #cover #content  {
+        height: 120px;
+        white-space: wrap;
+    }
+
+    #cover #title {
+        width: 400px;
+        height: 220px;
+        margin-top: 60px;
+    }
+
+    #cover #title h1 {
+        font-size: 100px;
+    }
+
+    #cover #title p {
+        font-size: 20px;
+        width: 370px;
+    }
+
+    #log-reg {
+        height: 850px;
+    }
+
+    #log-screen {
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: 0;
+    }
+
+    #reg-screen {
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: 0;
+    }
+
+    #reg-screen #data-container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #whatsapp-button {
+        display: none;
+    }
+
 }

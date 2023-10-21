@@ -6,8 +6,8 @@
     <title>ViajaLar</title>
 
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="../../Imagens/favicon-16x16.png" sizes="16x16" type="image/png">
-    <link rel="icon" href="../../Imagens/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../Imagens/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="../Imagens/favicon-32x32.png" sizes="32x32" type="image/png">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
@@ -65,7 +65,7 @@
     
     <section id="cover">
         <div>
-            <img src="../../Imagens/two happy frien 1 (3).png" alt="cover">
+            <img src="../Imagens/two happy frien 1 (3).png" alt="cover">
             <div id="title">
                 <h1><strong>Viaja</strong><em>LÁr</em></h1>
                 <p>Sua casa em qualquer lugar do mundo</p>
@@ -86,7 +86,7 @@
                 <h1>Bem-vindo ao ViajaLÁr - sua passagem para o mundo e além</h1>
                 <div id="border">
                     <p>Você já sonhou em conhecer lugares, mergulhar em culturas vibrantes e criar conexões genuínas com pessoas de todos os cantos do planeta?</p>
-                    <p>O <strong>ViajaLÁr</strong> está aqui para transformar esse <strong>sonho em realidade</strong>!</p>
+                    <p>O <strong>ViajaLÁr</strong> está aqui para transformar esse <strong>sonho em realidade!</strong></p>
                     <p>Somos mais do que uma plataforma de viagens; <strong>somos a chave para experiências que tocam o coração.</strong></p>
                 </div>
             </article>
@@ -130,15 +130,70 @@
                         <label><input type="checkbox"> Salvar credenciais</label>
                         <a href="#">Esqueceu a senha?</a>
                     </div>
-                    <button type="submit">Entrar</button>
+                    <button type="submit" id="entrar">Entrar</button>
                     <div id="register-link">
-                        <p>Não tem uma conta? <a href="#">Cadastre-se já!</a></p>
+                        <p>Não tem uma conta? <button type="button" onclick="alternarFormulario('reg-screen')">Cadastre-se já!</button></p>
                     </div>
                 </form>
             </div>
             <div id="reg-screen">
-                <h1>CADASTRO</h1>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, laboriosam quisquam. Rerum explicabo eligendi quo delectus, architecto alias consequatur reiciendis excepturi, harum quibusdam aliquid recusandae ut nostrum debitis! Qui, vero?</p>
+                <form action="">
+                    <h2>CADASTRO</h2>
+                    <div id="data-container">
+                        <div id="main-info">
+                            <div class="input-box">
+                                <input type="text" placeholder="Nome" required>
+                            </div>
+                            <div class="input-box">
+                                <input type="text" placeholder="Sobrenome" required>
+                            </div>
+                            <div class="input-box">
+                                <input type="text" placeholder="Documento" required>
+                            </div>
+                            <div class="input-box">
+                                <input type="email" placeholder="Email" required>
+                            </div>
+                            <div class="input-box">
+                                <input type="tel" placeholder="Celular (xx)9xxxxxxxx">
+                            </div>
+                            <div id="profile">
+                                <h3>Perfil</h3>
+                                <input type="radio" name="perfil" value="viajante" id="radio-option-viajante">
+                                <label for="radio-option-viajante"class="icon-label">
+                                    <i class="bi bi-backpack3-fill"></i> Viajante
+                                </label>
+                                <input type="radio" name="perfil" value="anfitriao" id="radio-option-anfitriao">
+                                <label for="radio-option-anfitriao"class="icon-label">
+                                    <i class="bi bi-house-door-fill"></i> Anfitrião
+                                </label>
+                            </div>
+                        </div>
+                        <div id="enderecos">
+                            <div class="input-box">
+                                <input type="text" placeholder="CEP">
+                            </div>
+                            <div class="input-box">
+                                <input type="text" placeholder="Estado" required>
+                            </div>
+                            <div class="input-box">
+                                <input type="text" placeholder="Cidade" required>
+                            </div>
+                            <div class="input-box">
+                                <input type="text" placeholder="Bairro" required>
+                            </div>
+                            <div class="input-box">
+                                <input type="text" placeholder="Endereço" required>
+                            </div>
+                            <div class="input-box">
+                                <input type="text" placeholder="Número"required>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" id="cadastrar">Cadastrar</button>
+                    <div id="login-link">
+                        <p>Já tem uma conta? <button onclick="alternarFormulario('log-screen')">Faça login!</button></p>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
@@ -146,30 +201,125 @@
     <section id="how">
         <div id="how-container">
             <h1>COMO FUNCIONA</h1>
-            <div class="explain">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ipsam assumenda beatae amet earum. Repellat, nihil blanditiis obcaecati nemo quia doloremque, minima cum deserunt aliquid cupiditate quas accusantium accusamus porro.</p>
+            <div id="how-viajante" class="how-perfil">
+                <h2>Para viajantes</h2>
+                <article>
+                    <h3>Cadastro gratuito</h3>
+                    <div class="border">
+                        <p>Para começar sua aventura, <strong>inscreva-se gratuitamente</strong> no ViajaLÁr. Crie seu perfil e compartilhe suas preferências de viagem e interesses para que possamos encontrar os anfitriões perfeitos para você.</p>
+                    </div>
+                    <h3>Busque destinos</h3>
+                    <div class="border">
+                        <p>Navegue por destinos emocionantes em nossa plataforma. Escolha o lugar que mais lhe intriga e comece a sua jornada. Quer uma escapada na praia? Um passeio em uma fazenda? Uma visita a outra cidade? <strong>Temos opções para todos os gostos.</strong></p>
+                    </div>
+                    <h3>Correspondência perfeita</h3>
+                    <div class="border">
+                        <p>Nossos algoritmos de correspondência trabalham para <strong>encontrar o anfitrião ideal</strong> com base em suas preferências e datas de viagem. Escolha entre <strong>abrigo gratuito ou por um custo mínimo.</strong></p>
+                    </div>
+                    <h3>Faça contatos</h3>
+                    <div class="border">
+                        <p>Conecte-se com seu anfitrião e comece a planejar sua viagem. Converse, esclareça dúvidas e <strong>estabeleça as bases</strong> para uma experiência incrível.</p>
+                    </div>
+                    <h3>Aventure-se</h3>
+                    <div class="border">
+                        <p>Quando tudo estiver alinhado, é hora de fazer as malas. Siga para o seu destino e conheça seu anfitrião com um <strong>sorriso caloroso e um abraço amigável.</strong></p>
+                    </div>
+                    <h3>Deixe um feedback</h3>
+                    <div class="border">
+                        <p>Após sua viagem, <strong>deixe um feedback</strong> sobre sua experiência. Isso ajuda a manter nossa <strong>comunidade segura e confiável.</strong></p>
+                    </div>
+                </article>
             </div>
-            <div class="explain">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem blanditiis quisquam rem animi voluptatum dignissimos. Modi adipisci, similique maxime dolore impedit cumque, voluptate laboriosam tenetur, explicabo repellat ipsam voluptatibus maiores!</p>
+            <div id="how-anfitriao" class="how-perfil">
+                <h2>Para anfitriões</h2>
+                <article>
+                    <h3>Crie seu perfil de anfitrião</h3>
+                    <div class="border">
+                        <p><strong>Inscreva-se como anfitrião</strong> e preencha seu perfil. Conte-nos sobre sua acomodação, seus interesses e sua disponibilidade.</p>
+                    </div>
+                    <h3>Descreva sua oferta</h3>
+                    <div class="border">
+                        <p>Detalhe o espaço que você está disposto a compartilhar. Fale do <strong>ambiente, o quarto, as comodidades e quaisquer regras</strong> que os viajantes devem seguir.</p>
+                    </div>
+                    <h3>Receba solicitações</h3>
+                    <div class="border">
+                        <p>Viajantes interessados podem entrar em contato com você. Converse com eles, tire dúvidas e <strong>conheça seus possíveis e futuros hóspedes.</strong></p>
+                    </div>
+                    <h3>Prepare-se para a chegada</h3>
+                    <div class="border">
+                        <p>Quando estiver pronto para receber um viajante, aceite a reserva e agende a data da estadia. <strong>Tenha tudo preparado para receber seu convidado no seu adorável lar.</strong></p>
+                    </div>
+                </article>
             </div>
-            <div class="explain">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, non voluptatum repellendus doloremque voluptatibus ipsa ea illum eius amet magni quam unde placeat deleniti est consectetur quasi sapiente optio! Eos.</p>
+            <div id="how-others" class="how-perfil">
+                <h2>Outros detalhes</h2>
+                <article>
+                    <h3>Comunique-se de forma transparente</h3>
+                    <div class="border">
+                        <p>Mantenha uma <strong>comunicação clara e aberta</strong> antes da estadia para discutir expectativas, regras da casa e detalhes de chegada.</p>
+                    </div>
+                    <h3>Esteja aberto a novas experiências</h3>
+                    <div class="border">
+                        <p>Viajar com Viajalar é sobre se aventurar e experimentar coisas novas. Esteja disposto a se <strong>adaptar a diferentes culturas e maneiras de vida.</strong> Lembre-se de <strong>respeitar o espaço e a privacidade do outro.</strong> Esteja atento às preferências e hábitos de cada parte.</p>
+                    </div>
+                    <h3>Mantenha seu perfil atualizado</h3>
+                    <div class="border">
+                        <p>Certifique-se de manter seu perfil atualizado com informações precisas sobre disponibilidade, comodidades, regras, interesses, entre outros <strong>detalhes que considerar importante.</strong></p>
+                    </div>
+                    <h3>Esteja preparado para emergências</h3>
+                    <div class="border">
+                        <p>Tenha um plano para emergências, como fornecer informações de <strong>contato de emergência e instruções para situações imprevistas.</strong></p>
+                    </div>
+                    <h3>Canal de suporte</h3>
+                    <div class="border">
+                        <p>O "Viajalar" geralmente possui um canal de suporte. Em caso de problemas,<strong> entre em contato com o suporte para resolver questões ou preocupações.</strong></p>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
 
+    <section id="linear-background"></section>
+
     <section id="success-cases">
         <div id="success-cases-container">
             <h1>CASOS DE SUCESSO</h1>
-            <div class="case">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque praesentium dolores doloribus sit corrupti? Recusandae, ratione tempore. Culpa aliquam, dolorum nulla esse iure repellendus officia temporibus ex amet incidunt assumenda!</p>
+            <div id="cases-viajantes">
+                <h2>VIAJANTES</h2>
+                <div class="case">
+                    <img src="" alt="lisboa">
+                    <h3>Luana Hoderick</h3>
+                    <p>"Minha aventura na plataforma ViajaLÁr foi além das minhas expectativas. Conheci o Carlos e a Morgana, anfitriões em Lisboa, que me acolheram como família. Eles não apenas compartilharam seu lindo apartamento, mas também me apresentaram a cafés locais, museus e festivais que eu nunca teria descoberto sozinha. Foi uma experiência enriquecedora que transformou minha viagem em uma jornada memorável."</p>
+                </div>
+                <div class="case">
+                    <img src="" alt="tokyo">
+                    <h3>Izumi Misaki</h3>
+                    <p>"Decidi explorar a vibrante cidade de Tóquio, mas minha preocupação era encontrar acomodações acessíveis. O ViajaLÁr me conectou à Rina, uma incrível anfitriã. Ela me proporcionou uma estadia confortável e compartilhou suas recomendações de restaurantes locais. Graças ao Viajalar, minha viagem foi uma imersão cultural fascinante."</p>
+                </div>
+                <div class="case">
+                    <img src="" alt="suica">
+                    <h3>Sofia e Roger</h3>
+                    <p>"Nossa paixão por aventuras na natureza nos levou às montanhas suíças. Com a ajuda do ViajaLÁr, conhecemos o Hans, um anfitrião em um chalé alpino. Passamos dias explorando trilhas e noites compartilhando histórias em frente à lareira. Foi uma experiência que aqueceu nosso coração."</p>
+                </div>
             </div>
-            <div class="case">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore ex sunt quidem voluptatem nisi accusamus debitis nam. Corporis optio quae dicta amet in accusamus ex voluptatum iste facere, tempore quidem!</p>
+            <div id="cases-anfitrioes">
+                <h2>ANFITRIÕES</h2>
+                <div class="case">
+                    <img src="" alt="rio-de-janeiro">
+                    <h3>Ricardo Santos</h3>
+                    <p>"Ser um anfitrião no Viajalar me trouxe amigos de todo o mundo. Conheci a Emma, uma viajante entusiasta da Austrália, que ficou em minha casa no Rio de Janeiro durante o Carnaval. Juntos, exploramos praias, sambamos em festas locais e compartilhamos momentos inesquecíveis. Minha experiência como anfitrião é uma fonte constante de alegria e aprendizado."</p>
+                </div>
+                <div class="case">
+                    <img src="" alt="canada">
+                    <h3>Emily Johnson</h3>
+                    <p>"Minha jornada como anfitriã no Viajalar tem sido uma experiência incrível, pois encontrei a solução perfeita para complementar minha renda e compartilhar a beleza de Vancouver com visitantes do mundo inteiro. Recebendo pessoas de diversas origens, cada hóspede trouxe histórias inspiradoras, diversidade cultural e uma energia contagiante. O Viajalar não só me permitiu ganhar dinheiro extra, mas também construir amizades e apreciar as riquezas culturais do mundo."</p>
+                </div>
+                <div class="case">
+                    <img src="" alt="paris">
+                    <h3>Alessandra e Roberta</h3>
+                    <p>"Receber hóspedes em nossa casa em Paris no ViajaLÁr trouxe mais do que dinheiro extra; trouxe amizades. Conhecemos o Sam, um viajante da Austrália, que se tornou um amigo próximo. Ensinamos uns aos outros sobre nossas culturas e compartilhamos inúmeras risadas. O ViajaLÁr é uma janela para o mundo e para a amizade."</p>
+                </div>
             </div>
-            <div class="case"></div>
-            <div class="case"></div>
-            <div class="case"></div>
         </div>
     </section>
 
@@ -196,7 +346,7 @@
 
     <div id="whatsapp-button">
         <a href="https://api.whatsapp.com/send?phone=5551997934884" target="_blank">
-            <img src="../../Imagens/whatslogo.png" alt="whats">
+            <img src="../Imagens/whatslogo.png" alt="whats">
         </a>
     </div>
     

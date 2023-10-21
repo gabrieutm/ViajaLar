@@ -28,7 +28,7 @@ menuItems.forEach((item) => {
 });
 
 function changeMenu() {
-    if (window.innerWidth <= 650) {
+    if (window.innerWidth <= 700) {
         mobileMenu.style.display = "block";
         desktopList.style.display = "none";
     } else {
@@ -39,3 +39,16 @@ function changeMenu() {
 
 window.onload = changeMenu;
 window.onresize = changeMenu;
+
+
+
+//login e registro
+function alternarFormulario(formulario) {
+    if (formulario === 'log-screen') {
+        document.getElementById('log-screen').style.display = 'flex';
+        document.getElementById('reg-screen').style.display = 'none';
+    } else if (formulario === 'reg-screen') {
+        document.getElementById('log-screen').style.display = 'none';
+        document.getElementById('reg-screen').style.display = 'flex';
+    }
+}
