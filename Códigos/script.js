@@ -52,3 +52,25 @@ function alternarFormulario(formulario) {
         document.getElementById('reg-screen').style.display = 'flex';
     }
 }
+
+
+
+// Selecionar o textarea e o elemento de contagem
+const textarea = document.getElementById("story");
+const countElement = document.getElementById("chars-left");
+
+// Adicionar um ouvinte de evento de entrada (digitação)
+textarea.addEventListener("input", function () {
+    const maxLength = parseInt(textarea.getAttribute("maxlength"));
+    const currentLength = textarea.value.length;
+    const remaining = maxLength - currentLength;
+
+    // Atualizar o texto de contagem
+    countElement.textContent = `${remaining} caracteres restantes.`;
+
+    // Verificar e ajustar o conteúdo se o limite for ultrapassado
+    if (remaining < 0) {
+        textarea.value = textarea.value.substring(0, maxLength);
+        countElement.textContent = "Limite de caracteres atingido.";
+    }
+});
