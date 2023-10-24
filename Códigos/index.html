@@ -401,6 +401,7 @@
             <div id="faq-question-submit">
                 <h2>Tem mais alguma dúvida?</h2>
                 <p>Use o campo abaixo para nos encaminhar sua pergunta, que em breve retornaremos.</p>
+                <input type="email" placeholder="Email" required>
                 <textarea id="question" rows="5" maxlength="500" placeholder="Faça sua pergunta aqui!" required></textarea>
                 <button type="submit">Enviar</button>
             </div>
@@ -410,14 +411,45 @@
     <section id="contact">
         <div id="contact-container">
             <h1>SUPORTE</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro beatae quos, facere reprehenderit repellat rerum incidunt aperiam nesciunt ipsam eum sint cupiditate, provident ullam quidem. Odio eius quidem cumque voluptates?</p>
+            <h2>Bem-vindo à nossa equipe de suporte ao cliente do ViajaLÁr. Estamos aqui para ajudar a tornar sua experiência na plataforma o mais agradável e tranquila possível. Se você tiver <strong>alguma dúvida, preocupação ou precisar de assistência</strong>, por favor, <strong>não hesite em nos contatar.</strong> Nossa equipe está à disposição para atender às suas necessidades.</h2>
+            <div id="contact-types">
+                <div id="contact-chat-online" class="contact-box">
+                    <h3>CHAT ONLINE</h3>
+                    <p>Oferecemos uma opção de chat ao vivo para respostas rápidas. Quando disponível, você pode conversar diretamente com um membro de nossa equipe para obter suporte instantâneo. <button onclick="openChat()">Clique aqui</button> para iniciar a conversa!</p>
+                </div>
+                <div id="contact-email" class="contact-box">
+                    <h3>EMAIL</h3>
+                    <p>Você também pode nos enviar um e-mail para support@viajalar.com. Nossa equipe responderá o mais rápido possível, geralmente dentro de 24 horas.</p>
+                </div>
+                <div id="contact-medias" class="contact-box">
+                    <h3>REDES SOCIAIS</h3>
+                    <p>Siga nossas redes sociais para ficar atualizado sobre notícias, dicas e informações sobre o ViajaLÁr. Você também pode entrar em contato por meio de mensagens diretas. Basta clicar em um dos ícones do lado direito do menu acima.</p>
+                </div>
+            </div>
         </div>
     </section>
+
+    <div id="chatbox">
+        <div id="chatbox-header">
+            <h1>Chat Online</h1>
+            <button onclick="closeChat()"><i class="bi bi-x"></i></button>
+        </div>
+        <div id="chatbox-body">
+            <p class="message">Olá</p>
+            <p class="message user-message">Oi</p>
+        </div>
+        <div id="chatbox-footer">
+            <form>
+                <input type="text">
+                <button>Enviar</button>
+            </form>
+        </div>
+    </div>
 
     <section id="app">
         <div id="app-container">
             <h1>APP</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, molestiae dolorum. Sit voluptatem recusandae nulla fugit natus ipsum architecto quos temporibus, incidunt excepturi ratione alias tempora, adipisci dolor, sint unde?</p>
+            <p>Em breve...</p>
         </div>
     </section>
 
@@ -428,7 +460,7 @@
     </div>
     
     <footer>
-        <h1>footer</h1>
+        <h1>Site desenvolvido por <a href="https://www.linkedin.com/in/gabrieltmachado/" target="_blank">Gabriel Machado</a></h1>
     </footer>
 
     <script src="script.js"></script>

@@ -1000,6 +1000,9 @@
     width: 50%;
     height: 100%;
     padding: 5px;
+    border: 2px solid var(--cor5);
+    border-radius: 10px;
+    outline: none;
 }
 
 #faq-question-submit button {
@@ -1020,31 +1023,257 @@
     outline: 2px solid var(--cor5);
 }
 
+#faq-question-submit input {
+    width: 300px;
+    margin: 15px 0;
+    font-family: var(--textosgerais);
+    color: var(--cor5);
+    font-size: 15px;
+    border: 2px solid var(--cor5);
+    border-radius: 10px;
+    padding: 5px;
+    outline: none;
+}
+
 #contact {
-    background-color: fuchsia;
+    background: url(../../Imagens/Customer\ Service\ .jpeg);
+    background-size: cover;
+    background-position: center;
     position: relative;
     display: flex;
     width: 100%;
-    height: 80vh;
+    height: 110vh;
     top: 55px;
+}
+
+#contact-container {
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.226);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding-top: 50px;
+}
+
+#contact-container h1 {
+    font-size: 50px;
+    font-family: var(--titulos);
+    color: var(--cor4);
+    margin: 10px;
+}
+
+#contact-container h2 {
+    font-size: 15px;
+    font-family: var(--textosgerais);
+    color: var(--cor4);
+    width: 70%;
+    text-align: justify;
+    background-color: var(--cor5);
+    border-radius: 10px;
+    padding: 15px;
+    line-height: 25px;
+    font-weight: normal;
+}
+
+#contact-container h2 strong {
+    color: var(--cor1);
+    font-weight: bolder;
+}
+
+#contact-container #contact-types {
+    display: flex;
+    flex-direction: row;
+    margin: 30px 0;
+    padding: 15px 0;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.contact-box {
+    height: 60%;
+    width: 100%;
+    margin: 0 30px;
+    background-color: var(--cor4);
+    color: var(--cor5);
+    padding: 10px;
+    border-radius: 10px;
+    outline: 2px solid var(--cor1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-box h3 {
+    font-family: var(--titulos);
+    font-size: 30px;
+    text-align: center;
+}
+
+.contact-box p {
+    font-family: var(--textosgerais);
+    font-size: 15px;
+    text-align: justify;
+    line-height: 25px;
+    width: 90%;
+}
+
+#contact-chat-online button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 15px;
+    font-family: var(--textosgerais);
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+#contact-chat-online button:hover {
+    text-decoration: underline;
+}
+
+#chatbox {
+    position: fixed;
+    left: 50px;
+    bottom: 0;
+    background-color: var(--cor2);
+    z-index: 1;
+    width: 20vw;
+    height: 60vh;
+    display: none;
+    flex-direction: column;
+    font-family: var(--textosgerais);
+    border-radius: 10px 10px 0 0;
+    outline: 2px solid var(--cor5);
+}
+
+#chatbox-header h1 {
+    color: var(--cor4);
+    padding: 10px;
+}
+
+#chatbox-header button {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    outline: none;
+    border: none;
+    color: var(--cor5);
+    font-size: 30px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#chatbox-body {
+    flex: 1;
+    color: var(--cor5);
+    background-color: var(--cor4);
+    padding: 20px 30px;
+}
+
+#chatbox-body .message {
+    background-color: var(--cor2);
+    padding: 10px;
+    color: var(--cor5);
+    width: fit-content;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.user-message {
+    background-color: var(--cor5);
+    color: var(--cor4);
+    border-radius: 10px;
+    margin-left: auto;
+}
+
+#chatbox-footer form {
+    display: flex;
+}
+
+#chatbox-footer form input {
+    flex: 1;
+    height: 30px;
+    border: none;
+    outline: none;
+    padding-left: 5px;
+    font-size: 15px;
+}
+
+#chatbox-footer form button {
+    width: 100px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: var(--cor2);
+    color: var(--cor5);
+    cursor: pointer;
+}
+
+#chatbox-footer form button:hover {
+    background-color: var(--cor1);
+    transition: 0.2s ease-in-out;
 }
 
 #app {
-    background-color: lightcyan;
     position: relative;
     display: flex;
     width: 100%;
     height: 80vh;
     top: 55px;
+    background-color: black;
+}
+
+#app-container {
+    background: url(../Imagens/loading-app.gif) no-repeat;
+    background-size: 150px;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+#app-container h1 {
+    color: white;
+    font-size: 60px;
+    text-align: center;
+    margin-top: 50px;
+    font-family: var(--titulos);
+}
+
+#app-container p {
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    font-family: var(--textosgerais);
 }
 
 footer {
-    background-color: crimson;
+    background-color: var(--cor2);
     position: relative;
     display: flex;
+    flex-direction: row;
     width: 100%;
     height: 55px;
     top: 55px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer h1 {
+    color: var(--cor4);
+    font-size: 30px;
+    font-family: var(--titulos);
+    font-weight: normal;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--cor3);
+    font-family: var(--titulos);
 }
 
 #whatsapp-button {

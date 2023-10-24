@@ -74,3 +74,19 @@ textarea.addEventListener("input", function () {
         countElement.textContent = "Limite de caracteres atingido.";
     }
 });
+
+
+
+function openChat() {
+    const chatPopup = document.getElementById('chatbox');
+    
+    // Exibe a janela de chat
+    chatPopup.style.display = 'flex';
+};
+
+function closeChat() {
+    const chatPopup = document.getElementById('chatbox');
+    
+    // Fecha a janela de chat
+    chatPopup.style.display = 'none';
+};
